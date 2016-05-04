@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+
+        tools:context="com.example.myapplication.MainClass">
+
+
+    <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/TextUrl"
+            android:textColor="#8f8d8d"
+            android:layout_marginTop="137dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_toLeftOf="@+id/imageButton"
+            android:layout_toStartOf="@+id/imageButton"/>
+
+    <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Get HTML"
+            android:id="@+id/buttonGO"
+            android:layout_alignBottom="@+id/TextUrl"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"/>
+
+    <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textMultiLine"
+            android:ems="10"
+            android:id="@+id/TextHTML"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentBottom="true"
+            android:layout_alignRight="@+id/buttonGO"
+            android:editable="false"
+            android:layout_below="@+id/TextUrl"/>
+<RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/buttonGO"
+        android:weightSum="1"
+        android:orientation="vertical"
+        android:id="@+id/RadGroup">
+
+    <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="82dp"
+            android:text="https://"
+            android:id="@+id/RButHttps"
+            android:layout_alignTop="@+id/RButHttp"
+            android:layout_toLeftOf="@+id/buttonGO"
+            android:layout_toStartOf="@+id/buttonGO"
+            android:layout_weight="0.43"/>
+
+    <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="55dp"
+            android:text="http://"
+            android:id="@+id/RButHttp"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/imageButton"
+            android:layout_toEndOf="@+id/imageButton"/>
+
+</RadioGroup>
+
+
+    <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageButton"
+            android:layout_alignTop="@+id/buttonGO"
+            android:layout_toLeftOf="@+id/buttonGO"
+            android:layout_alignBottom="@+id/TextUrl"
+            android:src="@drawable/krest"
+           />
+
+
+</RelativeLayout>
